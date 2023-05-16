@@ -1,0 +1,113 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'pluto';
+  src: url('../fonts/pluto.woff2') format('woff2'),
+			 url('../fonts/pluto.woff') format('woff');
+  font-weight: bold;
+	font-style: normal;
+
+}
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button:not(:disabled), summary {
+	cursor: pointer;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text: #006491;
+	--color-background: #fff;
+	--color-block1: #E31837;
+	--color-block2: #006491;
+  --color-red: #E31837;
+  --color-block-letters: #006491;
+  --color-white: #fff;
+}
+
+@media (prefers-color-scheme:dark)
+{
+	:root {
+		--color-text: #fff;
+		--color-background: #000;
+		--color-block1: #E31837;
+	--color-block2: #006491;
+  --color-red: #E31837;
+  --color-block-letters: #fff;
+  --color-white: #000;
+	}
+}
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+  font-family: pluto, sans-serif;
+	color: var(--color-text);
+  background-color:var(--color-background);
+}
+
+/* jouw code */
+/* domino effect */
+h1 {
+	display: flex;
+	gap: 0em;
+	transition: 1s ease-in;
+  font-size: 5em;
+	padding-left: 1em;
+}
+
+h1:hover{
+	gap: .4em; /* dit zorgt ervoor dat er ruimte tussen de letters ontstaat */
+}
+
+h1 span{
+	display: block;
+	transition: 1s ease-out;
+	max-width: 1em;
+}
+
+h1:hover span { /* dit stukje zorgt ervoor dat de letters veranderen in blokjes */
+	background-color: var(--color-block-letters);
+	width: .4em;
+	overflow: hidden; /* zorgt ervoor dat de stukjes van de letters die uitsteken niet meer zichtbaar zijn */
+	border-radius: .05em;
+	transform-origin: right bottom; /*dit zorgt ervoor dat het steentje niet vanuit het midden gaat draaien maar draait zoals het hoort bij een domino steen */
+}
+
+body:hover h1 {
+	animation-name: fall;
+}
+
+
+@keyframes fall {
+	0% {rotate: 30deg;}
+}
+
+h1:hover span:first-of-type {
+	rotate: 30deg;
+}
+
+h1:hover span:nth-of-type(2) {
+	rotate: 30deg;
+}
+
+h1:hover span:nth-of-type(2) {
+	rotate: 30deg;
+}
+
+
+

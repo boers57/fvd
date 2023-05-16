@@ -1,0 +1,164 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'pluto';
+  src: url('../fonts/pluto.woff2') format('woff2'),
+			 url('../fonts/pluto.woff') format('woff');
+  font-weight: bold;
+	font-style: normal;
+
+}
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button:not(:disabled), summary {
+	cursor: pointer;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text: #006491;
+	--color-background: #fff;
+	--color-block1: #E31837;
+	--color-block2: #006491;
+  --color-red: #E31837;
+  --color-block-letters: #006491;
+  --color-white: #fff;
+}
+
+@media (prefers-color-scheme:dark)
+{
+	:root {
+		--color-text: #fff;
+		--color-background: #000;
+		--color-block1: #E31837;
+	--color-block2: #006491;
+  --color-red: #E31837;
+  --color-block-letters: #fff;
+  --color-white: #000;
+	}
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+  font-family: pluto, sans-serif;
+	color: var(--color-text);
+  background-color:var(--color-background);
+}
+
+/* jouw code */
+
+/* logo */
+body::before {
+	content: "";
+	display: inline-block;
+	width: 3em;
+	height: 6em;
+	position: absolute;
+
+	background-image:
+		radial-gradient(
+			white 50%,
+			transparent 50% /* dit is het bovenste bolletje,  */
+		),
+		radial-gradient(
+			white 50%,
+			transparent 50% /* dit is het tweede bolletje,  */
+		),
+		radial-gradient(
+			white 50%,
+			transparent 50% /* dit is het onderste bolletje,  */
+		),
+		linear-gradient(
+			#E31837 49%,
+			#fff 49% 51% ,
+			#006491 51%
+		);
+		border-radius: .2em;
+	
+	background-size:
+		1.5em 1.5em, /* bovenste bolletje */
+		1.5em 1.5em, /* middelste bolletje */
+		1.5em 1.5em, /* onderste bolletje */
+		cover; /* dit is de grootte van de bolletjes */
+	
+	background-repeat:no-repeat;
+	
+	background-position:
+		.75em .75em, /* dit is het bovenste bolletje, de eerste is van links en de andere van boven */
+		1.4em 3.1em, /* dit is het tweede bolletje */
+		.12em 4.5em, /* dit is het onderste bolletje */
+		left top; /* dit is de plek van de bolletjes */
+}
+
+
+/* domino effect */
+h1 {
+	display: flex;
+	gap: 0em;
+	transition: 1s ease-in;
+  font-size: 5em;
+	padding-left: 1em;
+}
+
+h1:hover{
+	gap: .4em; /* dit zorgt ervoor dat er ruimte tussen de letters ontstaat */
+}
+
+
+h1 span{
+	display: block;
+	max-width: 1em;
+}
+
+h1:hover span { /* dit stukje zorgt ervoor dat de letters veranderen in blokjes */
+	background-color: var(--color-block-letters);
+	width: .4em;
+	overflow: hidden;
+	border-radius: .05em;
+	transform-origin: right bottom; /*dit zorgt ervoor dat het steentje niet vanuit het midden gaat draaien maar draait zoals het hoort bij een domino steen */
+}
+
+h1:hover span:first-of-type {
+	transition: .5s;
+}
+
+h1:hover span:nth-of-type(2) {
+	transition: .7s;
+}
+
+h1:hover {
+	animation-name: fall;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-play-state: paused;
+
+
+}
+
+@keyframes fall {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(70deg);
+	}
+} 
+
+
+
