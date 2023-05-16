@@ -27,15 +27,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+  <img src="readme-images/Fvd_Domino's_.jpg" width="375px" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - Het 
-  - punt 2
-  - nog een punt
-  - ...
+  - De letters laten veranderen in blokjes.
+  - De blokjes zo draaien dat het een goed effect geeft.
+  - De timing van de animatie, wanneer moet het volgende blokje "vallen".
  
 </details>
 
