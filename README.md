@@ -14,7 +14,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
+  1. https://codepen.io/rociopromerosanchez/pen/GRWvZQM (voor het domino effect)
+  2. https://codepen.io/shooft/pen/gOBWzOV?editors=1100 (code van Sanne voor begin domino)
   2. -bron 2-
   3. -...-
 
@@ -35,6 +36,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - De letters laten veranderen in blokjes.
   - De blokjes zo draaien dat het een goed effect geeft.
   - De timing van de animatie, wanneer moet het volgende blokje "vallen".
+  - Dat het helemaal goed mee schaalt, met hoe groot het scherm is.
  
 </details>
 
