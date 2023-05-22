@@ -58,7 +58,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Ik heb geleerd hoe je uberhaupt een animatie moet maken. Ik snapte er vrij weinig van en ik heb veel moeten opzoeken en uitzoeken, allereerst om te begrijpen hoe alles werkt. Uiteindelijk snap ik het nu wel wat beter.
   - Wat ik ook heb geleerd is om het logo met before neer te zetten. Ik had eerst geen idee hoe ik dat logo daar ging krijgen, maar met before en background image is het uiteindelijk gelukt. Ook had ik nog nooit met gradient gewerkt, maar dit werkt goed voor mijn logo.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/code-logo.svg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
