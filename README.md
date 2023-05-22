@@ -16,7 +16,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Bronnenlijst
   1. https://codepen.io/rociopromerosanchez/pen/GRWvZQM (voor het domino effect)
   2. https://codepen.io/shooft/pen/gOBWzOV?editors=1100 (code van Sanne voor begin domino)
-  2. -bron 2-
+  2. https://developer.mozilla.org/en-US/docs/Web/CSS/clamp (voor het responsive maken)
   3. -...-
 
 
@@ -49,17 +49,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/resultaat.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/resultaat-plat.svg" width="375px" alt="uitkomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
+  - Ik heb geleerd hoe je uberhaupt een animatie moet maken. Ik snapte er vrij weinig van en ik heb veel moeten opzoeken en uitzoeken, allereerst om te begrijpen hoe alles werkt. Uiteindelijk snap ik het nu wel wat beter.
+  - Wat ik ook heb geleerd is om het logo met before neer te zetten. Ik had eerst geen idee hoe ik dat logo daar ging krijgen, maar met before en background image is het uiteindelijk gelukt. Ook had ik nog nooit met gradient gewerkt, maar dit werkt goed voor mijn logo.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
+  - Het responsive maken, was eerst even last. Dit kwam omdat ik geen idee had hoe dit moest en dan wordt het ook lastig waar je op moet zoeken. Uiteindelijk herkende ik weer van de les hoe dit moest en toen kon ik beter zoeken en was het uiteindelijk helemaal niet zo lastig. Ik heb nu alleen dat het schaalt als je de breedte veranderd, maar zou dit eigenlijk ook wilen met de hoogte.
+
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
