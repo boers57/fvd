@@ -1,0 +1,203 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'pluto';
+  src: url('../fonts/pluto.woff2') format('woff2'),
+			 url('../fonts/pluto.woff') format('woff');
+  font-weight: bold;
+	font-style: normal;
+
+}
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button:not(:disabled), summary {
+	cursor: pointer;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text: #006491;
+	--color-background: #fff;
+	--color-block1: #E31837;
+	--color-block2: #006491;
+  --color-block-letters: #006491;
+
+}
+
+@media (prefers-color-scheme:dark) {
+	:root {
+	--color-text: #fff;
+	--color-background: #000;
+	--color-block1: #E31837;
+	--color-block2: #006491;
+  --color-block-letters: #fff;
+	}
+}
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+  font-family: pluto, sans-serif;
+	color: var(--color-text);
+  background-color:var(--color-background);
+}
+
+/* jouw code */
+/* logo */
+h1::before {
+	content: "";
+  display: block;
+  width: .6em;
+  height: 1.2em;
+  /* transform: rotate(45deg); */
+  /* margin-right: .3em; */
+
+    background-image:
+		radial-gradient(
+      var(--color-background) 50%,
+      transparent 50%
+			 /* dit is het bovenste bolletje,  */
+		),
+		radial-gradient(
+			var(--color-background) 50%,
+			transparent 50% /* dit is het tweede bolletje,  */
+		),
+		radial-gradient(
+			var(--color-background)50%,
+			transparent 50% /* dit is het onderste bolletje,  */
+		),
+		linear-gradient(
+      var(--color-block1) 49%,
+      var(--color-background) 49% 51%,
+      var(--color-block2) 51%
+			
+		);
+	border-radius: .05em;
+	
+	background-size:
+    .3em .3em,
+    .3em .3em,
+    .3em .3em,
+    cover; /* dit is de grootte van de bolletjes */
+	
+	background-repeat:no-repeat;
+	
+	background-position:
+    .15em .15em, /* dit is het bovenste bolletje, de eerste is van links en de andere van boven */
+    .25em .65em, /* dit is het tweede bolletje */
+    .05em .87em, /* dit is het onderste bolletje */
+    left top; /* dit is de plek van de bolletjes */
+}
+
+
+/* domino effect */
+h1 {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	gap: 0em;
+  font-size: clamp(1em, 8vw, 5em); /* eerste is de manimale waarde die wordt toegepast als het scherm klein is, tweede is de gewenste waarde, derde is de maximale waarde op groot scherm*/
+
+}
+
+h1:hover{
+	gap: .4em; /* dit zorgt ervoor dat er ruimte tussen de letters ontstaat */
+}
+
+h1:hover span { /* dit stukje zorgt ervoor dat de letters veranderen in blokjes */
+	background-color: var(--color-block-letters);
+	width: .4em;
+	overflow: hidden; /* zorgt ervoor dat de stukjes van de letters die uitsteken niet meer zichtbaar zijn */
+	border-radius: .05em;
+	transform-origin: right bottom; /*dit zorgt ervoor dat het steentje niet vanuit het midden gaat draaien maar draait zoals het hoort bij een domino steen */
+  animation-name: fall;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+h1 span {
+  display: block;
+	transition: 1s ease-out;
+	max-width: 1em;
+}
+
+
+/* zorgt ervoor dat de steentjes 1 voor 1 vallen, inplaats van allemaal tegelijk */
+h1 span:first-of-type {
+  animation-delay: .5s;
+}
+
+h1 span:nth-of-type(2) {
+  animation-delay: .8s;
+}
+
+h1 span:nth-of-type(3) {
+  animation-delay: 1.1s;
+}
+
+h1 span:nth-of-type(4) {
+  animation-delay: 1.4s;
+}
+
+h1 span:nth-of-type(5) {
+  animation-delay: 1.7s;
+}
+
+h1 span:nth-of-type(6) {
+  animation-delay: 2.0s;
+}
+
+h1 span:nth-of-type(7) {
+  animation-delay: 2.3s;
+}
+
+h1 span:last-of-type {
+  animation-delay: 2.6s;
+}
+
+
+@keyframes fall {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(70deg);
+  }
+}
+
+/* Domino effect logo */
+h1:hover::before{
+  animation-name: logo;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+@keyframes logo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(70deg);
+  }
+}
+
+
+
+
+

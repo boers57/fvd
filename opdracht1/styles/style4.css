@@ -61,57 +61,11 @@ body {
 }
 
 /* jouw code */
-
-/* logo */
-body::before {
-	content: "";
-	display: inline-block;
-	width: 3em;
-	height: 6em;
-	position: absolute;
-	transform: rotate(45deg);
-
-	background-image:
-		radial-gradient(
-			white 50%,
-			transparent 50% /* dit is het bovenste bolletje,  */
-		),
-		radial-gradient(
-			white 50%,
-			transparent 50% /* dit is het tweede bolletje,  */
-		),
-		radial-gradient(
-			white 50%,
-			transparent 50% /* dit is het onderste bolletje,  */
-		),
-		linear-gradient(
-			#E31837 49%,
-			#fff 49% 51% ,
-			#006491 51%
-		);
-		border-radius: .2em;
-	
-	background-size:
-		1.5em 1.5em, /* bovenste bolletje */
-		1.5em 1.5em, /* middelste bolletje */
-		1.5em 1.5em, /* onderste bolletje */
-		cover; /* dit is de grootte van de bolletjes */
-	
-	background-repeat:no-repeat;
-	
-	background-position:
-		.75em .75em, /* dit is het bovenste bolletje, de eerste is van links en de andere van boven */
-		1.4em 3.1em, /* dit is het tweede bolletje */
-		.12em 4.5em, /* dit is het onderste bolletje */
-		left top; /* dit is de plek van de bolletjes */
-}
-
-
 /* domino effect */
 h1 {
 	display: flex;
 	gap: 0em;
-	transition: 1s ease-in;
+	/* transition: 1s ease-in; , zorgt ervoor dat de letters mooi uit elkaar sliden*/
   font-size: 5em;
 	padding-left: 1em;
 }
@@ -135,39 +89,38 @@ h1:hover span { /* dit stukje zorgt ervoor dat de letters veranderen in blokjes 
 
 	animation-name: fall;
 	animation-duration: 1s;
-	animation-iteration-count: infinite;
+  /* animation-iteration-count: infinite;, zorgt ervoor dat de animatie doorgaat, nu speelt de animatie 1 keer af */
 	animation-timing-function: ease-in-out;
 }	
 
-
-@keyframes fall {
-	0% {
-		transform:rotate(0deg);
-	}
-	100% {
-		transform: rotate(70deg);
-	}
-}
-
 h1 span:first-of-type {
-	transition: 0s;
+  animation-delay: 0s;
 }
 
 h1 span:nth-of-type(2) {
-	transition: 1.2s;
+  animation-delay: 1.2s;
 }
 
 h1 span:nth-of-type(3) {
-	transition: 2s;
+  animation-delay: 2s;
 }
 
+h1 span:nth-of-type(4) {
+  animation-delay: 2.5;
+}
 
+h1 span:nth-of-type(5) {
+  animation-delay: 3s;
+}
 
-
-
-
-
-
+@keyframes fall {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(70deg);
+	}
+}
 
 
 
