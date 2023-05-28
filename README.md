@@ -78,15 +78,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/wireflow.svg" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Dat de animatie start met een klik.
+  - Dat de balletjes precies goed rollen en optijd stoppen en dan vallen.
+  - Hoe je iets op een goede manier kan opslaan.
+  - Hoe je een mop "random" kan kiezen en ook elke keer/dag een andere.
 </details>
 
 
