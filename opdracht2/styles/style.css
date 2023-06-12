@@ -12,10 +12,6 @@
 
 }
 
-
-
-
-
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -27,10 +23,6 @@ button:not(:disabled), summary {
 	cursor: pointer;
 }
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -38,34 +30,65 @@ button:not(:disabled), summary {
 	/* startje */
 	--color-text:#111;
 	--color-background:#eeeeee;
+  --color-block:#fff;
 	--color-button: #6079f3;
+  --color-joke: #9ca9ea;
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
 /****************/
-body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-text);
-  background-color:var(--color-background);
+body{
+  background-color: var(--color-background);
 }
 
-/* jouw code */
-h1 {
-	text-align: center;
-	margin-top: 2em;
-	font-size: 2em;
+div{
+  width: 25em;
+  padding: .7em .7em;
+  border-radius: .8em;
+  background-color: var(--color-block);
+  margin: auto;
+  margin-top: 1em;
+
 }
 
-button {
-	background-color: var(--color-button);
-	border: none;
-	color: var(--color-background);
-	padding: 1.5em 3em;
+h1{
+  display: block;
+  text-align: center;
+  margin-top: 1em;
+  color: var(--color-text);
+  font-size: 1.5em;
+}
+
+button{
+  display: block;
+  align-items: center;
   font-size: 1em;
-	border-radius: .5em;
+  color: var(--color-background);
+  background-color: var(--color-button);
+  border: none;
+  border-radius: .5em;
+  padding: .5em 1em;
+  margin: auto;
 }
+
+button :hover{
+  background-color: var(--color-joke);
+}
+
+p{
+  font-size: 1em;
+  background-color: var(--color-joke);
+  color: var(--color-background);
+  word-wrap: break-word;
+  width: 20em;
+  border-radius: .8em;
+  margin: auto;
+}
+
+.kleur{
+  margin-top: 1em;
+  padding: .8em 1em;
+}
+
+
