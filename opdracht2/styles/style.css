@@ -90,29 +90,17 @@ p{
   padding: .8em 1em;
 }
 
-#favorites {
-  width: 25em;
-  padding: .7em .7em;
-  border-radius: .8em;
-  background-color: var(--color-block);
-  margin: auto;
-  margin-top: 1em;
+div:nth-of-type(2) {
+  margin-top: 5em;
+  height: 10em;
 }
 
-#favorites h2 {
+h2 {
   text-align: center;
   margin-top: 1em;
   color: var(--color-text);
   font-size: 1.2em;
 }
 
-#favorites p {
-  background-color: var(--color-joke);
-  color: var(--color-background);
-  word-wrap: break-word;
-  width: 20em;
-  border-radius: .8em;
-  margin: .5em auto;
-}
 
 

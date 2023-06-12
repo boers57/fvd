@@ -140,7 +140,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Ik had eerst het plan om met een balletje iets te doen, dit was meer mijn idee voor als het allemaal ging lukken. Maar ik vond het lastig om met de API een joke generator te maken en met het drag and drop. Daar heb ik zoveel tijd ingestoken dat het niet meer lukte om echt het idee met het balletje nog toe te voegen.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
