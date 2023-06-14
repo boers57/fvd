@@ -67,6 +67,7 @@ document.addEventListener("keydown", function(event) {
 
 
 
+
 ////////////////////////////////////////
 /////DIT STUK GAAT OVER SPRAAKHERKENNING, werkt niet
 ////////////////////////////////////////

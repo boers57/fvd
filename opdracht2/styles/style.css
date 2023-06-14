@@ -52,7 +52,7 @@ body{
 }
 
 div{
-  width: clamp(23em, 50vw, 50em);
+  width: clamp(23em, 40vw, 50em);
   padding: .7em .7em;
   border-radius: .8em;
   background-color: var(--color-block);
@@ -80,8 +80,12 @@ button{
   margin: auto;
 }
 
-button :hover{
+button:hover{
   background-color: var(--color-joke);
+}
+
+button:active{
+  box-shadow: 0 0 0 4px var(--color-text);;
 }
 
 p{
@@ -92,6 +96,7 @@ p{
   width: clamp(20em, 30vw, 47em);
   border-radius: .8em;
   margin: auto;
+  
 }
 
 .kleur{
@@ -102,6 +107,7 @@ p{
 div:nth-of-type(2) {
   margin-top: 5em;
   min-height: 6em;
+  
 }
 
 h2 {
@@ -110,6 +116,7 @@ h2 {
   color: var(--color-text);
   font-size: clamp(1.2em, 3vw, 1.7em);
 }
+
 
 
 
