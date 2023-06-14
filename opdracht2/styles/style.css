@@ -35,6 +35,15 @@ button:not(:disabled), summary {
   --color-joke: #9ca9ea;
 }
 
+@media (prefers-color-scheme:dark) {
+	:root {
+	--color-text: #eee;
+	--color-background: #000;
+	--color-block: #5a5a5a;
+	--color-button: #45d19b;
+  --color-joke: #98dac1;
+	}
+}
 /****************/
 /* JOUW STYLING */
 /****************/
@@ -43,7 +52,7 @@ body{
 }
 
 div{
-  width: 25em;
+  width: clamp(23em, 50vw, 50em);
   padding: .7em .7em;
   border-radius: .8em;
   background-color: var(--color-block);
@@ -56,13 +65,13 @@ h1{
   text-align: center;
   margin-top: 1em;
   color: var(--color-text);
-  font-size: 1.5em;
+  font-size: clamp(1.5em, 3vw, 2em);
 }
 
 button{
   display: block;
   align-items: center;
-  font-size: 1em;
+  font-size: clamp(.9em, 2vw,1.2em);
   color: var(--color-background);
   background-color: var(--color-button);
   border: none;
@@ -76,11 +85,11 @@ button :hover{
 }
 
 p{
-  font-size: 1em;
+  font-size: clamp(1em, 2vw, 1.1em);
   background-color: var(--color-joke);
   color: var(--color-background);
   word-wrap: break-word;
-  width: 20em;
+  width: clamp(20em, 30vw, 47em);
   border-radius: .8em;
   margin: auto;
 }
@@ -92,14 +101,14 @@ p{
 
 div:nth-of-type(2) {
   margin-top: 5em;
-  height: 10em;
+  min-height: 6em;
 }
 
 h2 {
   text-align: center;
   margin-top: 1em;
   color: var(--color-text);
-  font-size: 1.2em;
+  font-size: clamp(1.2em, 3vw, 1.7em);
 }
 
 

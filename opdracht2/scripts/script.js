@@ -4,6 +4,7 @@ var favoritesContainer = document.getElementById("favorites");
 var url =
   "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
 
+
 function getJoke() {
   // hier wordt de css-class "kleur" toegevoegd aan het jokeContainer-element, veranderd de achtegrond kleur van de mop
   jokeContainer.classList.add("kleur");
@@ -45,6 +46,47 @@ function drop(event) {
   p.classList.add("kleur");
   // 'p' wordt toegevoegd aan favoritesContainer. Met 'appendChild' word het element toegevoegd als nieuw 'child' aan het favoritesContainer-element. Hierdoor wordt het p-element zichtbaar, deze bevat de moptekst.
   favoritesContainer.appendChild(p);
+
+   // Speel het geluid af
+   var sound = document.getElementById("sound");
+   sound.play();
 }
 
 btn.addEventListener("click", getJoke);
+
+////////////////////////////////////////
+/////DIT STUK GAAT OVER toetsenbord
+////////////////////////////////////////
+// het event wordt geactiveerd wanneer een toets wordt ingedrukt
+document.addEventListener("keydown", function(event) {
+  // vergelijkt de waar met het getal en het teken, als dit waar is dan wordt de 'getJoke' functie aangeroepen.
+  if (event.key === 32 || event.key === " ") {
+    getJoke();
+  }
+});
+
+
+
+////////////////////////////////////////
+/////DIT STUK GAAT OVER SPRAAKHERKENNING, werkt niet
+////////////////////////////////////////
+function handleSpeechRecognition(event) {
+  if (event.results && event.results.length > 0) {
+    var transcript = event.results[0][0].transcript.toLowerCase();
+    if (transcript.includes("nieuwe mop")) {
+      getJoke();
+    }
+  }
+}
+
+document.addEventListener("speechRecognition", handleSpeechRecognition);
+
+// Spraakherkenning activeren
+var recognition = new webkitSpeechRecognition();
+recognition.lang = "nl-NL";
+recognition.continuous = true;
+recognition.interimResults = true;
+recognition.onresult = function (event) {
+  document.dispatchEvent(new CustomEvent("speechRecognition", { detail: event }));
+};
+recognition.start();
