@@ -98,6 +98,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken na testen (week 7)</summary>
+  <img src="readme-images/feedback1-2" width="375px" alt="feedback">
+  <img src="readme-images/feedback2-2" width="375px" alt="feedback">
 
   Neem minimaal 5 bevindingen op:
 
