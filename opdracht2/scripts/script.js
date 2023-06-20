@@ -1,13 +1,14 @@
 var jokeContainer = document.getElementById("joke");
 var favoritesContainer = document.getElementById("favorites");
-var favoriteJoke = [];
+var favoriteJokes = []; // Array om favoriete moppen bij te houden
 var btn = document.getElementById("btn");
 var url =
   "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
 
 
+
+// functie wordt uitgevoerd wanneer er op de knop wordt geklikt om een nieuwe mop op te halen.
 function getJoke() {
-  // hier wordt de css-class "kleur" toegevoegd aan het jokeContainer-element, veranderd de achtegrond kleur van de mop
   jokeContainer.classList.add("kleur");
   fetch(url)
     .then((data) => data.json())
@@ -18,61 +19,72 @@ function getJoke() {
       // "draggable" wordt toegevoegd aan het jokeContainer-element en maakt het sleepbaar
       jokeContainer.setAttribute("draggable", "true");
       // wanneer het element wordt gesleept wordt de functie "dragstart" uitgevoerd
-      jokeContainer.addEventListener ("dragstart", dragStart);
+      jokeContainer.addEventListener("dragstart", dragStart);
+        
     });
 }
 
+// controleert of de mop in het het favorietenlijstje staat 
 function isInFavorites(jokeText) {
   return favoriteJokes.includes(jokeText);
 }
 
 // geeft aan dat het een "drop" gebeurtenis kan accepteren. 
 function allowDrop(event) {
-  // voorkomt dat de standaardactie voor het slepen en neerzetten wordt uitgevoerd. Anders probeert de browser dit element op een andere manier te verwerken, zoals openen als link.
+  // voorkomt standaard sleepactie
   event.preventDefault();
 }
 
-// functie wordt uitgevoerd wanneer het jokeContainer-element wordt gesleept. Zorgt ervoor dat de tekst zichtbaar is wanneer de mop daar komt
+// wordt uitgevoerd wanneer de mop wordt gesleept
 function dragStart(event) {
-  // de gegevens van de mop wordt toegevoegd door "text/plain" en de inhoud van de mop komt via "jokeContainer.textContent"
+  // de gegevens van de mop worden toegevoegd
   event.dataTransfer.setData("text/plain", jokeContainer.textContent);
-}
+  }
 
-// functie wordt uitgevoerd wanneer de mop wordt neergelaten op favoritesContainer-element. Het doel is om de mop toe te voegen aan het element. De twee variabelen moeten in de functie omdat ze specifiek zijn voor elke "drop", gegevens van die specifieke mop worden zo vast gehouden. Anders als het erbuiten staat, dan worden de laatst opgeslagen gegevens gebruikt
+// wordt uitgevoerd wanneer de mop wordt neergelaten op het favorietenlijstje
 function drop(event) {
-  // wordt gebrukt om de standaardactie te voorkomen en zelf de controle te geven over wat er gebeurd
   event.preventDefault();
-  // mop wordt hier opgehaald, getData("text/plain") wordt gebruikt om de gegevens op te halen van de funcite dragStart
+  // mop wordt hier opgehaald
   var jokeText = event.dataTransfer.getData("text/plain");
   // element gemaakt om de moptekst te laten zien
   var p = document.createElement("p");
-  // de moptekst wordt ingesteld. zorgt ervoor dat de p veranderd in de gegevens die worden opgehaald bij joketext
+  // zorgt ervoor dat de "p" veranderd in de tekst van jokeText
   p.textContent = jokeText;
   p.classList.add("kleur");
   
+  // zorgt ervoor dat een mop niet meerdere keren kan worden toegevoegd aan het favorietenlijstje
   if (!isInFavorites(jokeText)) {
+    // als de mop niet in het lijstje staat wordt de p toegevoegd aan het lijstje
     favoritesContainer.appendChild(p);
+    // als de mop niet in het lijstje staat wordt de moptekst toegevoegd 'favoriteJokes' Array, hierdoor wordt bijgehouden welke moppen zich in het lijstje bevinden.
     favoriteJokes.push(jokeText);
   }
 
-   // Speel het geluid af
-   var sound = new Audio("./mp3/ping.aiff");
-   sound.play();
+  // Speel het geluid af wanneer een mop wordt toegevoegd aan favorieten
+  var sound = new Audio("../mp3/ping.aiff");
+  sound.play();
 }
 
+// wordt uitgevoerd wanneer er op een mop in favorietenlijstje wordt geklikt.
 function removeFromFavorites(event) {
+  // slaat de tekst op van het element waar op is geklikt, dus als er geklikt wordt slaat de tekst op in jokeText.
   var jokeText = event.target.textContent;
+  // met index0f wordt gecontroleerd of de tekst in de array aanwezig is. Als die gevonden wordt dan geeft de 'index0f' de index terug anders als die niet gevonden wordt geeft die -1.
   var index = favoriteJokes.indexOf(jokeText);
+  // als de moptekst al aanwezig is in de favoriteJokes array, voor de if uit. !== niet gelijk.
   if (index !== -1) {
+    // verwijdert de moptekst uit de favoriteJokes array door de splice. Splice verwijdert of voegt nieuwe elementen toe.
     favoriteJokes.splice(index, 1);
+    // wordt css class op gezet voor de animatie
     event.target.classList.add("fadeOut");
+    
+    // stelt een timer in, na 1 seconden wordt de functie uitgevoerd
     setTimeout(() => {
       event.target.remove();
     }, 1000);
   }
 }
-
-
+  
 btn.addEventListener("click", getJoke);
 favoritesContainer.addEventListener("click", removeFromFavorites);
 
