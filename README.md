@@ -101,26 +101,39 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Neem minimaal 5 bevindingen op:
 
-
-
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Wanneer je een meerdere moppen toevoegd aan het lijstje, dan wordt het een hele lange lijst die buiten beeld gaat.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  Ik heb in de css een max-height gegeven aan de section van favorites en daarna overflow: auto, die zorgt ervoor dat je kan scrollen wanneer de content niet mee erin past.
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Geluid is toegevoegd wanneer je een mop plaats in het favorietenlijstje, deze is niet te horen op github wel op safari.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  Ik heb Eva een berichtje gestuurd, met de vraag of zij mij wilt helpen. Ik had bij het path in de javascript een ./ ervoor moeten zetten, want toen ik dat deed toen werkte het geluid wel.
 
 
   ### Bevinding 3:
-  ...
+  De moppen kunnen nog niet verwijderd worden, alleen maar toegevoegd.
+
+  #### oplossing:
+  Ik heb uiteindelijk in de code een aanpassing gedaan. Wanneer je op een mop klikt wordt de functie removeFromFavorites uitgevoerd en dan wordt de mop verwijderd met een kleine fade-out animatie.
+  
+
+  ### Bevinding 4:
+  Er is nog geen animaties, deze moet nog worden toegevoegd aan de site.
+
+  #### oplossing:
+  De animatie heb ik toegevoegd bij het verwijderen van een mop. In de css heb ik een korte animatie gemaakt die getoond wordt wanneer je op de mop klikt in het favorietenlijstje.
+
+
+  ### Bevinding 5:
+  Een mop kan je heel vaak toevoegen aan het lijstje.
+
+  #### oplossing:
+  Dit heb ik uiteindelijk opgelost door de functioon isInFavorites toe te voegen, die controleert of de mop al in het lijstje staat. Ook in de function drop staat bij de onderdaan dat de mop wordt toegevoegd als die nog niet in het favorietenlijstje staat.
 </details>
 
 
@@ -131,17 +144,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/eind1.png" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/eind2.png" width="375px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Ik heb tijdens deze opdracht veel geleerd. Allereerst hoe je een API kan ophalen en kan gebruiken. 
+  Ook het drag and drop had ik nog nooit gedaan en na wat puzzelen was dat ook helemaal gelukt.
+  Door de vorige opdracht, wist ik dat ik met clamp ervoor kon zorgen dat alles goed mee schaalt.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  
+  Wat ik lastig vond was om alle verschillende dingen goed op elkaar aan te laten sluiten, ik heb hierbij hulp gevraagd zodat het goed op elkaar aansluit. Uiteindelijk is het voor het grootste gedeelte gelukt. In mijn ontwerp had ik eerst iets getekent met een balletje, helaas is dat er niet meer van gekomen doordat ik daar geen tijd meer voor had.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
