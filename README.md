@@ -152,12 +152,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Ik heb tijdens deze opdracht veel geleerd. Allereerst hoe je een API kan ophalen en kan gebruiken. 
   Ook het drag and drop had ik nog nooit gedaan en na wat puzzelen was dat ook helemaal gelukt.
   Door de vorige opdracht, wist ik dat ik met clamp ervoor kon zorgen dat alles goed mee schaalt.
+  Wat ik ook heb geleerd is hoe je met een toets een iets kan uitvoeren.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/code-toetsenbord.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Wat ik lastig vond was om alle verschillende dingen goed op elkaar aan te laten sluiten, ik heb hierbij hulp gevraagd zodat het goed op elkaar aansluit. Uiteindelijk is het voor het grootste gedeelte gelukt. In mijn ontwerp had ik eerst iets getekent met een balletje, helaas is dat er niet meer van gekomen doordat ik daar geen tijd meer voor had.
+  Wat ik lastig vond was om alle verschillende dingen goed op elkaar aan te laten sluiten, ik heb hierbij hulp gevraagd zodat het goed op elkaar aansluit. Het verwijderen van een mop die in e favorietenlijst stond, vond ik ook lastig. Dit kwam vooral omdat ik geen idee had hoe die zou kunnen, uiteindelijk is het gelukt en daar ben ik erg blij mee. Uiteindelijk is het voor het grootste gedeelte gelukt. In mijn ontwerp had ik eerst iets getekent met een balletje, helaas is dat er niet meer van gekomen doordat ik daar geen tijd meer voor had.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  <img src="readme-images/code-verwijderen.png" width="375px" alt="bummer">
 </details>
