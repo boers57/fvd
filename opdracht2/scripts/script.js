@@ -49,7 +49,7 @@ function drop(event) {
   favoritesContainer.appendChild(p);
 
    // Speel het geluid af
-   var sound = new Audio("mp3/ping.aiff");
+   var sound = new Audio("./mp3/ping.aiff");
    sound.play();
 }
 
