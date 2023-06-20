@@ -58,7 +58,7 @@ function drop(event) {
   }
 
   // Speel het geluid af wanneer een mop wordt toegevoegd aan favorieten
-  var sound = new Audio("./mp3/ping.aiff");
+  var sound = new Audio("../mp3/ping.aiff");
   sound.play();
 }
 
