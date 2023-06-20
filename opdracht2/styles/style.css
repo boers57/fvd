@@ -80,13 +80,7 @@ button{
   margin: auto;
 }
 
-button:hover{
-  background-color: var(--color-joke);
-}
 
-button:active{
-  box-shadow: 0 0 0 4px var(--color-text);;
-}
 
 p{
   font-size: clamp(1em, 2vw, 1.1em);
@@ -107,8 +101,7 @@ p{
 div:nth-of-type(2) {
   margin-top: 5em;
   min-height: 6em;
-  max-height: 30em;
-  overflow: auto; /* toont een scrollbalk als de lijst groter is */
+  
   
 }
 
