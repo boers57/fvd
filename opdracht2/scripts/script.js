@@ -1,6 +1,7 @@
 var jokeContainer = document.getElementById("joke");
-var btn = document.getElementById("btn");
 var favoritesContainer = document.getElementById("favorites");
+var favoriteJoke = [];
+var btn = document.getElementById("btn");
 var url =
   "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
 
@@ -21,6 +22,9 @@ function getJoke() {
     });
 }
 
+function isInFavorites(jokeText) {
+  return favoriteJokes.includes(jokeText);
+}
 
 // geeft aan dat het een "drop" gebeurtenis kan accepteren. 
 function allowDrop(event) {
@@ -45,17 +49,32 @@ function drop(event) {
   // de moptekst wordt ingesteld. zorgt ervoor dat de p veranderd in de gegevens die worden opgehaald bij joketext
   p.textContent = jokeText;
   p.classList.add("kleur");
-  // 'p' wordt toegevoegd aan favoritesContainer. Met 'appendChild' word het element toegevoegd als nieuw 'child' aan het favoritesContainer-element. Hierdoor wordt het p-element zichtbaar, deze bevat de moptekst.
-  favoritesContainer.appendChild(p);
+  
+  if (!isInFavorites(jokeText)) {
+    favoritesContainer.appendChild(p);
+    favoriteJokes.push(jokeText);
+  }
 
    // Speel het geluid af
    var sound = new Audio("./mp3/ping.aiff");
    sound.play();
 }
 
+function removeFromFavorites(event) {
+  var jokeText = event.target.textContent;
+  var index = favoriteJokes.indexOf(jokeText);
+  if (index !== -1) {
+    favoriteJokes.splice(index, 1);
+    event.target.classList.add("fadeOut");
+    setTimeout(() => {
+      event.target.remove();
+    }, 1000);
+  }
+}
+
+
 btn.addEventListener("click", getJoke);
-
-
+favoritesContainer.addEventListener("click", removeFromFavorites);
 
 
 ////////////////////////////////////////
@@ -68,30 +87,3 @@ document.addEventListener("keydown", function(event) {
     getJoke();
   }
 });
-
-
-
-
-////////////////////////////////////////
-/////DIT STUK GAAT OVER SPRAAKHERKENNING, werkt niet
-////////////////////////////////////////
-function handleSpeechRecognition(event) {
-  if (event.results && event.results.length > 0) {
-    var transcript = event.results[0][0].transcript.toLowerCase();
-    if (transcript.includes("nieuwe mop")) {
-      getJoke();
-    }
-  }
-}
-
-document.addEventListener("speechRecognition", handleSpeechRecognition);
-
-// Spraakherkenning activeren
-var recognition = new webkitSpeechRecognition();
-recognition.lang = "nl-NL";
-recognition.continuous = true;
-recognition.interimResults = true;
-recognition.onresult = function (event) {
-  document.dispatchEvent(new CustomEvent("speechRecognition", { detail: event }));
-};
-recognition.start();
