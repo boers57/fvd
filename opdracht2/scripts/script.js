@@ -26,18 +26,19 @@ function getJoke() {
 
 // controleert of de mop in het het favorietenlijstje staat 
 function isInFavorites(jokeText) {
+  // jokeTekst wordt vergeleken met favoritJokes, als het overeenkomt dan geeft "includes" true terug.
   return favoriteJokes.includes(jokeText);
 }
 
 // geeft aan dat het een "drop" gebeurtenis kan accepteren. 
 function allowDrop(event) {
-  // voorkomt standaard sleepactie
+  // door dit kun je aangepaste dingen doen, zoals drop (weet niet helemaal wat hier mee bedoelt wordt).
   event.preventDefault();
 }
 
 // wordt uitgevoerd wanneer de mop wordt gesleept
 function dragStart(event) {
-  // de gegevens van de mop worden toegevoegd
+  // de gegevens van de mop worden toegevoegd (weet niet helemaal wat hier mee bedoelt wordt).
   event.dataTransfer.setData("text/plain", jokeContainer.textContent);
   }
 
@@ -56,7 +57,7 @@ function drop(event) {
   if (!isInFavorites(jokeText)) {
     // als de mop niet in het lijstje staat wordt de p toegevoegd aan het lijstje
     favoritesContainer.appendChild(p);
-    // als de mop niet in het lijstje staat wordt de moptekst toegevoegd 'favoriteJokes' Array, hierdoor wordt bijgehouden welke moppen zich in het lijstje bevinden.
+    // als de mop niet in het lijstje staat wordt de moptekst toegevoegd aan'favoriteJokes' Array, hierdoor wordt bijgehouden welke moppen zich in het lijstje bevinden.
     favoriteJokes.push(jokeText);
   }
 
@@ -73,7 +74,7 @@ function removeFromFavorites(event) {
   var index = favoriteJokes.indexOf(jokeText);
   // als de moptekst al aanwezig is in de favoriteJokes array, voor de if uit. !== niet gelijk.
   if (index !== -1) {
-    // verwijdert de moptekst uit de favoriteJokes array door de splice. Splice verwijdert of voegt nieuwe elementen toe.
+    // verwijdert de moptekst uit de favoriteJokes array door de splice. Splice verwijdert of voegt nieuwe elementen toe, weet niet precies hoe dit werkt.
     favoriteJokes.splice(index, 1);
     // wordt css class op gezet voor de animatie
     event.target.classList.add("fadeOut");
@@ -94,7 +95,8 @@ favoritesContainer.addEventListener("click", removeFromFavorites);
 ////////////////////////////////////////
 // het event wordt geactiveerd wanneer een toets wordt ingedrukt
 document.addEventListener("keydown", function(event) {
-  // vergelijkt de waar met het getal en het teken, als dit waar is dan wordt de 'getJoke' functie aangeroepen.
+
+  // als de ingedrukte toets gelijk is aan het getal of teken dan wordt de functie 'getJoke' aangeroepen.
   if (event.key === 32 || event.key === " ") {
     getJoke();
   }
