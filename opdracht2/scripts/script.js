@@ -21,6 +21,7 @@ function getJoke() {
     });
 }
 
+
 // geeft aan dat het een "drop" gebeurtenis kan accepteren. 
 function allowDrop(event) {
   // voorkomt dat de standaardactie voor het slepen en neerzetten wordt uitgevoerd. Anders probeert de browser dit element op een andere manier te verwerken, zoals openen als link.
@@ -48,11 +49,14 @@ function drop(event) {
   favoritesContainer.appendChild(p);
 
    // Speel het geluid af
-   var sound = document.getElementById("sound");
+   var sound = new Audio("mp3/ping.aiff");
    sound.play();
 }
 
 btn.addEventListener("click", getJoke);
+
+
+
 
 ////////////////////////////////////////
 /////DIT STUK GAAT OVER toetsenbord
