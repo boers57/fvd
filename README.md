@@ -16,15 +16,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Bronnenlijst
   1. https://codepen.io/rociopromerosanchez/pen/GRWvZQM (voor het domino effect)
   2. https://codepen.io/shooft/pen/gOBWzOV?editors=1100 (code van Sanne voor begin domino)
-  2. https://developer.mozilla.org/en-US/docs/Web/CSS/clamp (voor het responsive maken)
-  3. https://dev.to/shantanu_jana/random-joke-generator-using-javascript-2011 (opdracht2, de code om de basis van de joke generator te maken)
+  3. https://developer.mozilla.org/en-US/docs/Web/CSS/clamp (voor het responsive maken)
   4. https://www.w3schools.com/howto/howto_css_image_text.asp (voor tekst over afbeelding)
   5. https://www.tutorialspoint.com/how-to-show-images-with-a-click-in-javascript-using-html# ( om met klikken de afbeeldig te laten zien)
   6. https://codepen.io/shooft/pen/rNdoWQZ (voor favorieten)
   7. https://www.w3schools.com/cssref/tryit.php?filename=trycss3_js_animation-play-state (gebruikt om de animatie weer aan te zetten en te kunnen stoppen)
   8. https://www.w3schools.com/jsref/jsref_foreach.asp (alle li's in javascript)
+  9. https://pixabay.com/nl/sound-effects (geluidjes)
   
-  6. https://freesound.org/people/Alexhanj/sounds/528730/ (ping geluid)
 
 
 
@@ -192,11 +191,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevinding 4:
 
+</details>
+
+<details>
+<summary> Eindresultaat </summary>
+### Je uitkomst - karakteristiek screenshot(s):
+  <img src="readme-images/eindher1.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/eindher2.png" width="375px" alt="uitkomst opdracht 2">
 
 
+  ### Dit ging goed/Heb ik geleerd: 
+  Ook deze keer heb ik weer veel geleerd. Ik heb allereerst geleerd hoe je tekst over het plaatje krijgt. Wat ik ook heb geleerd is hoe je de afbeelding eerst niet zichtbaar hebt en daarna wel, met de button. Ook met de animatie afspelen, ik heb hiervoor veel verschillende dingen geprobeerd. Ook het animeren van de moppen was erg leerzaam, ik had een voorbeeld van Eva gekregen en dat heb ik gebruikt om mijn moppen zo te laten 'rollen'.
 
-
-
+  ### Dit was lastig/Is niet gelukt:
+  Ik wilde voor de herksing de library proberen van drag and drop, helaas is dit mij weer niet gelukt. Ik heb wel een andere manier gevonden, door het hartje, om het op te slaan. Ook had ik nog gewild dat het hartje op zijn plaats bleef staan als het scherm groter werd, dus rechts onder de h1. Wat helaas niet is gelukt is dat de functie toevoegen alleen werkt als er ook echt een mop staat, nu kan je de hele tijd toevoegen ook als de moppen aan het 'rollen' zijn. 
 
 </details>
 
