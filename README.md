@@ -189,8 +189,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevinding 3:
   Ik had zelf de slotmachine getekend en de lampjes ook die je te zien krijgt, alleen het was nog wel even wat werk om dit op elkaar te krijgen. Ook met de tekst om die op de afbeelding te krijgen en ook dat het op de juiste plek bleef zitten als het scherm groter werd. Ik heb uiteindelijk gebruik gemaakt van percentages bij top en left en dan transform:translate, nu blijft de afbeelding en de tekst op de onderste afbeelding op zijn plek zitten (bron 4).
 
-  ### Bevinding 4:
-
 </details>
 
 <details>
@@ -204,7 +202,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Ook deze keer heb ik weer veel geleerd. Ik heb allereerst geleerd hoe je tekst over het plaatje krijgt. Wat ik ook heb geleerd is hoe je de afbeelding eerst niet zichtbaar hebt en daarna wel, met de button. Ook met de animatie afspelen, ik heb hiervoor veel verschillende dingen geprobeerd. Ook het animeren van de moppen was erg leerzaam, ik had een voorbeeld van Eva gekregen en dat heb ik gebruikt om mijn moppen zo te laten 'rollen'.
 
   ### Dit was lastig/Is niet gelukt:
-  Ik wilde voor de herksing de library proberen van drag and drop, helaas is dit mij weer niet gelukt. Ik heb wel een andere manier gevonden, door het hartje, om het op te slaan. Ook had ik nog gewild dat het hartje op zijn plaats bleef staan als het scherm groter werd, dus rechts onder de h1. Wat helaas niet is gelukt is dat de functie toevoegen alleen werkt als er ook echt een mop staat, nu kan je de hele tijd toevoegen ook als de moppen aan het 'rollen' zijn. 
+  Ik wilde voor de herksing de library proberen van drag and drop, helaas is dit mij weer niet gelukt. Ik heb wel een andere manier gevonden, door het hartje, om het op te slaan. Ook had ik nog gewild dat het hartje op zijn plaats bleef staan als het scherm groter werd, dus rechts onder de h1. Wat ik ook graag nog had gewild is dat wanneer je op stop klikt, dat dan precies een mop te zien is, als je nu klikt kan het zijn dat je maar de helft ziet van de mop.
 
 </details>
 
