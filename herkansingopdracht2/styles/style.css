@@ -86,7 +86,7 @@ img:last-of-type {
   position: absolute;
   display: none;
   width: 22em;
-  top: 45%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
