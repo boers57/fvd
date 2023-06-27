@@ -99,6 +99,104 @@ h2 {
   color: var(--color-joke-text);
 }
 
+/**************************/
+/* Joke tekst en animatie */
+/* Code opzet van Eva gekregen */
+/**************************/
+ul {
+  list-style: none;
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
+  width: 13em;
+  padding: 0;
+  height: 8em;
+
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+@keyframes rrh {
+  0%{transform: translatey(0);}
+  100%{transform: translatey(-70em);}
+}
+
+li {
+  background-color: var(--color-grey);
+  
+  width: fit-content;
+  animation: rrh 3s infinite linear;
+  animation-play-state: paused;
+
+  padding: 1em;
+  margin: 1em 0;
+}
+
+p{
+  font-size: .8em;
+  color: var(--color-joke-text);
+}
+
+
+/**************************/
+/* buttons */
+/**************************/
+button:first-of-type {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--color-fav-button);
+  color: var(--color-text-button);
+  border: none;
+  border-radius: .3em;
+  padding: .4em;
+  margin-top: .4em;
+}
+
+button:nth-of-type(2) {
+  position: absolute;
+  top: 63.3%;
+  left: calc(50% - 4em);
+  transform: translate(-50%, -40%);
+
+  background-color: var(--color-button);
+  color: var(--color-text-button);
+  border: none;
+  border-radius: .3em;
+  padding: .6em 2em;
+  font-size: 1em;
+}
+
+button:last-of-type {
+  position: absolute;
+  top: 64%;
+  left: calc(50% + 4em);
+  transform: translate(-50%, -50%);
+
+  background-color: var(--color-button);
+  color: var(--color-text-button);
+  border: none;
+  border-radius: .3em;
+  padding: .6em 2em;
+  font-size: 1em;
+}
+
+/* button states */
+button:hover {
+  background-color: var(--color-background);
+} 
+
+button:active {
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+
+
 /***********/
 /* hartje */
 /**********/
@@ -148,102 +246,4 @@ a span.updated{
   100% {
     transform:scale(1);
   }
-}
-
-
-
-/**************************/
-/* Joke tekst en animatie */
-/* Code opzet van Eva gekregen */
-/**************************/
-ul {
-  list-style: none;
-  position: absolute;
-  top: 39%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-
-  width: 13em;
-  padding: 0;
-  height: 8em;
-
-  background-color: #f7f7f7;
-  overflow: hidden;
-}
-
-@keyframes rrh {
-  0%{transform: translatey(0);}
-  100%{transform: translatey(-70em);}
-}
-
-li {
-  background-color: var(--color-grey);
-  
-  width: fit-content;
-  animation: rrh 5s infinite linear;
-  animation-play-state: paused;
-
-  padding: 1em;
-  margin: 1em 0;
-}
-
-p{
-  font-size: .8em;
-  color: var(--color-joke-text);
-}
-
-
-/**************************/
-/* buttons */
-/**************************/
-button:first-of-type {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  background-color: var(--color-fav-button);
-  color: var(--color-text-button);
-  border: none;
-  border-radius: .3em;
-  padding: .4em;
-  margin-top: .4em;
-}
-
-button:nth-of-type(2) {
-  position: absolute;
-  top: 63.3%;
-  left: calc(50% - 4em);
-  transform: translate(-50%, -40%);
-
-  background-color: var(--color-button);
-  color: var(--color-text-button);
-  border: none;
-  border-radius: .3em;
-  padding: .6em 2em;
-  font-size: 1em;
-}
-
-button:nth-of-type(2):hover {
-  background-color: var(--color-background);
-}
-
-
-button:last-of-type {
-  position: absolute;
-  top: 64%;
-  left: calc(50% + 4em);
-  transform: translate(-50%, -50%);
-
-  background-color: var(--color-button);
-  color: var(--color-text-button);
-  border: none;
-  border-radius: .3em;
-  padding: .6em 2em;
-  font-size: 1em;
-}
-
-button:last-of-type:hover {
-  background-color: var(--color-background);
 }

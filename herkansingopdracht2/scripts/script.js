@@ -16,6 +16,9 @@ function stopAnimation () {
     li.style.animationPlayState = "paused";
   });
   lightImage.style.display ="block";
+  var sound = new Audio("./mp3/tada.mp3");
+    sound.play();
+
 }
 
 startButton.addEventListener("click", startAnimation);
@@ -41,4 +44,7 @@ function favorietMaken() {
   setTimeout(function(){
   favAmount.classList.remove("updated");
   }, 400);  
+
+  var sound = new Audio("./mp3/ding.mp3");
+    sound.play();
 }
