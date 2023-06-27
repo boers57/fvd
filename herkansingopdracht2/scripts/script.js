@@ -16,9 +16,9 @@ function stopAnimation () {
     li.style.animationPlayState = "paused";
   });
   lightImage.style.display ="block";
+
   var sound = new Audio("./mp3/tada.mp3");
     sound.play();
-
 }
 
 startButton.addEventListener("click", startAnimation);
