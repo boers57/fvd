@@ -176,7 +176,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Nieuw idee:
   Voor de herkansing wilde ik gaan voor wel nog dezelfde opdracht, maar wel met een andere uitstraling. Ik heb mijn inspiratie gehaald uit een slotmachine. Mijn idee is dus dat als je op de start button klikt dat de moppen dan voorbij rollen en wanneer je op stop drukt dan zie je een mop. Ook kan je de mop opslaan/favoriet maken door op de button te klikken, je ziet dan bij het hartje het aantal veranderen.
+</details>
 
+<details>
   <summary> Bevindingen</summary>
 
   ### Bevinding 1:
