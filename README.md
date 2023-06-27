@@ -18,8 +18,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. https://codepen.io/shooft/pen/gOBWzOV?editors=1100 (code van Sanne voor begin domino)
   2. https://developer.mozilla.org/en-US/docs/Web/CSS/clamp (voor het responsive maken)
   3. https://dev.to/shantanu_jana/random-joke-generator-using-javascript-2011 (opdracht2, de code om de basis van de joke generator te maken)
-  4. https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API (drag and drop, ook bij guides en dan 'drag operations')
-  5. https://www.w3schools.com/html/html5_draganddrop.asp (drag and drop)
+  4. https://www.w3schools.com/howto/howto_css_image_text.asp (voor tekst over afbeelding)
+  5. https://www.tutorialspoint.com/how-to-show-images-with-a-click-in-javascript-using-html# ( om met klikken de afbeeldig te laten zien)
+  6. https://codepen.io/shooft/pen/rNdoWQZ (voor favorieten)
+  7. https://www.w3schools.com/cssref/tryit.php?filename=trycss3_js_animation-play-state (gebruikt om de animatie weer aan te zetten en te kunnen stoppen)
+  8. https://www.w3schools.com/jsref/jsref_foreach.asp (alle li's in javascript)
+  
   6. https://freesound.org/people/Alexhanj/sounds/528730/ (ping geluid)
 
 
@@ -163,4 +167,34 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Wat ik lastig vond was om alle verschillende dingen goed op elkaar aan te laten sluiten, ik heb hierbij hulp gevraagd zodat het goed op elkaar aansluit. Het verwijderen van een mop die in de favorietenlijst stond, vond ik ook lastig. Dit kwam vooral omdat ik geen idee had hoe die zou kunnen, uiteindelijk is het gelukt en daar ben ik erg blij mee. Uiteindelijk is het voor het grootste gedeelte gelukt. In mijn ontwerp had ik eerst iets getekent met een balletje, helaas is dat er niet meer van gekomen doordat ik daar geen tijd meer voor had.
 
   <img src="readme-images/code-verwijderen.png" width="375px" alt="bummer">
+
 </details>
+
+## Opdracht 2 herkansing
+<details>
+  <summary> Nieuw idee</summary>
+
+  ### Nieuw idee:
+  Voor de herkansing wilde ik gaan voor wel nog dezelfde opdracht, maar wel met een andere uitstraling. Ik heb mijn inspiratie gehaald uit een slotmachine. Mijn idee is dus dat als je op de start button klikt dat de moppen dan voorbij rollen en wanneer je op stop drukt dan zie je een mop. Ook kan je de mop opslaan/favoriet maken door op de button te klikken, je ziet dan bij het hartje het aantal veranderen.
+
+  <summary> Bevindingen</summary>
+
+  ### Bevinding 1:
+  Om de moppen te laten rollen heb ik heel wat gezocht op het internet, maar ik kon niet echt iets vinden wat ik snapte en wat mij kon helpen. Ik heb daarom de hulp van Eva ingeschakeld en zij heeft voor mij een Codepen gemaakt met hoe het kan rollen. Hierbij gaf zij wel aan dat het makkelijker was om het met li's te doen, dus helaas is er geen API maar zijn het li's geworden.
+
+  ### Bevinding 2:
+  Het rollen van de li's bleef aanstaan, dus eerst heb ik daar een pauze op gezet in de css. Maar toen moest het ook weer aan en uit gaan met de knoppen. Ook dit was een heel gedoe, want voorbeelden gaven vaak alleen aan of alleen uit. Uiteindelijk heb ik een goed voorbeeld gevonden, waarbij de animatie aan en uit ging. Alleen was toen maar 1 li te zien. Ik ben toen verder gaan zoeken en had toen gevonden hoe je dit voor alle li's kan laten gelden (bron 8).
+
+  ### Bevinding 3:
+  Ik had zelf de slotmachine getekend en de lampjes ook die je te zien krijgt, alleen het was nog wel even wat werk om dit op elkaar te krijgen. Ook met de tekst om die op de afbeelding te krijgen en ook dat het op de juiste plek bleef zitten als het scherm groter werd. Ik heb uiteindelijk gebruik gemaakt van percentages bij top en left en dan transform:translate, nu blijft de afbeelding en de tekst op de onderste afbeelding op zijn plek zitten (bron 4).
+
+  ### Bevinding 4:
+
+
+
+
+
+
+
+</details>
+
