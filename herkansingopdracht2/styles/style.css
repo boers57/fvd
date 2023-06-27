@@ -160,9 +160,9 @@ button:first-of-type {
 
 button:nth-of-type(2) {
   position: absolute;
-  top: 63.3%;
+  top: 63%;
   left: calc(50% - 4em);
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -50%);
 
   background-color: var(--color-button);
   color: var(--color-text-button);
@@ -174,7 +174,7 @@ button:nth-of-type(2) {
 
 button:last-of-type {
   position: absolute;
-  top: 64%;
+  top: 63%;
   left: calc(50% + 4em);
   transform: translate(-50%, -50%);
 
@@ -233,7 +233,7 @@ span {
 a span.updated{
   animation-name: updated;
   animation-duration:.2s;
-  animation-iteration-count:2;
+  animation-iteration-count:2; /*wordt twee keer herhaalt */
 }
 
 @keyframes updated {

@@ -23,6 +23,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   7. https://www.w3schools.com/cssref/tryit.php?filename=trycss3_js_animation-play-state (gebruikt om de animatie weer aan te zetten en te kunnen stoppen)
   8. https://www.w3schools.com/jsref/jsref_foreach.asp (alle li's in javascript)
   9. https://pixabay.com/nl/sound-effects (geluidjes)
+  10.https://codepen.io/ezaadnoordijk/pen/RwqKjdZ https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction (code van Eva)
   
 
 
