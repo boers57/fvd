@@ -76,7 +76,7 @@ section {
   margin-top: 2em;
 }
 
-img {
+img:first-of-type {
   display: block;
   margin: 0 auto;
   width: 22em;
@@ -85,7 +85,8 @@ img {
 img:last-of-type {
   position: absolute;
   display: none;
-  top: 44%;
+  width: 22em;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
