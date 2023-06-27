@@ -12,7 +12,6 @@
 
 }
 
-
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -24,104 +23,67 @@ button:not(:disabled), summary {
 	cursor: pointer;
 }
 
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eeeeee;
-	--color-button: #6079f3;
+  --color-text: #fbfbfb;
+  --color-joke-text: #5076ea;
+  --color-slot: #fcc800;
+  --color-border: #eb3c14;
+  --color-grey: #bfbfbf;
+
+  
+	
 }
 
-
-
+@media (prefers-color-scheme:dark) {
+	:root {
+    --color-text: #fff;
+    --color-joke: #000;
+	}
+}
 /****************/
 /* JOUW STYLING */
 /****************/
-
-body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-text);
-  background-color:var(--color-background);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-span {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+section {
+  background-color: var(--color-slot);
+  height: 27em;
+  width: 20em;
+  margin: auto;
+  border-radius: 5em 5em .5em .5em;
+  border: .4em solid var(--color-border);
 }
 
 h1 {
-  font-size: 2.5em;
+  display: block;
+  text-align: center;
+  font-size: 1.4em;
+  color: var(--color-text);
+  border-radius: 5em 5em 0em 0em;
+  margin-top: 2em;
 }
 
-button {
-  background-color: var(--color-button);
-	border: none;
-	color: var(--color-background);
-	padding: .5em 2em;
-  font-size: 1.2em;
-	border-radius: .5em;
-}
-
-span span {
-  position: relative;
-  width: 22em;
-}
-
-span span span:first-of-type {
-  width: 15em;
-  height: .5em;
-  top: 5em;
-  transform: rotate(15deg);
+p{
+  text-align: center;
+  font-size: 1em;
   background-color: var(--color-text);
+  color: var(--color-joke-text);
+  word-wrap: break-word;
+  padding: 2.5em;
+  margin: 2.5em 1em;
+  
 }
 
-span span span:nth-of-type(2) {
-  width: 15em;
-  height: .5em;
-  top: 10em;
-  transform: rotate(-15deg);
-  background-color: var(--color-text);
+button{
+  display: block;
+  font-size: clamp(.9em, 2vw,1.2em);
+  color: var(--color-text);
+  background-color: var(--color-joke-text);
+  border: none;
+  border-radius: .2em;
+  padding: .5em 1em;
+  margin: auto;
+  margin-top: 3em;
 }
-
-span span span:nth-of-type(3) {
-  width: 15em;
-  height: .5em;
-  top: 15em;
-  transform: rotate(15deg);
-  background-color: var(--color-text);
-}
-
-span span span:nth-of-type(4) {
-  width: 15em;
-  height: .5em;
-  top: 20em;
-  transform: rotate(-15deg);
-  background-color: var(--color-text);
-}
-
-span span span:nth-of-type(5) {
-  width: 15em;
-  height: .5em;
-  top: 25em;
-  transform: rotate(15deg);
-  background-color: var(--color-text);
-}
-
-span span span:nth-of-type(6) {
-  width: 20em;
-  height: .5em;
-  top: 32em;
-  background-color: var(--color-button);
-}
-
-
-
-

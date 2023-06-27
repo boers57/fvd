@@ -1,0 +1,146 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+			 url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button:not(:disabled), summary {
+	cursor: pointer;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+  --color-text: #fbfbfb;
+  --color-text-button: #fbfbfb;
+  --color-joke-text: #5076ea;
+  --color-button: #5076ea;
+  --color-background:#021c6a;
+
+  
+	
+}
+
+@media (prefers-color-scheme:dark) {
+	:root {
+  --color-text: #fd2929;
+  --color-text-button: #fbfbfb;
+  --color-joke-text: #5076ea;
+  --color-button: #07216d;
+  --color-background:#000;
+	}
+}
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+  background-color: var(--color-background);
+}
+h1 {
+  text-align: center;
+  color: var(--color-text);
+}
+
+section:first-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 22em;
+}
+
+img:nth-of-type(2) {
+  position: absolute;
+  display: none;
+}
+
+h2 {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: var(--color-joke-text);
+}
+
+#content {
+  background-color: red;
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12em;
+  height: 8em;
+}
+
+p {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .8em;
+  word-wrap: break-word;
+  max-width: 20em;
+  max-height: 8em;
+  color: var(--color-joke-text);
+  overflow: auto;
+  cursor: grab;
+}
+
+button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-button);
+  color: var(--color-text-button);
+  border: none;
+  border-radius: .3em;
+  padding: .8em 2em;
+  font-size: 1em;
+}
+
+section:last-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 10em;
+  width: 10em;
+
+  background-color: var(--color-text);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+

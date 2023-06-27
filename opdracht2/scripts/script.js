@@ -2,6 +2,7 @@ var jokeContainer = document.getElementById("joke");
 var favoritesContainer = document.getElementById("favorites");
 var favoriteJokes = []; // Array om favoriete moppen bij te houden
 var btn = document.getElementById("btn");
+var btn = document.querySelector("button");
 var url =
   "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
 
@@ -59,11 +60,10 @@ function drop(event) {
     favoritesContainer.appendChild(p);
     // als de mop niet in het lijstje staat wordt de moptekst toegevoegd aan'favoriteJokes' Array, hierdoor wordt bijgehouden welke moppen zich in het lijstje bevinden.
     favoriteJokes.push(jokeText);
-  }
 
-  // Speel het geluid af wanneer een mop wordt toegevoegd aan favorieten
-  var sound = new Audio("./mp3/geluid.mp3");
-  sound.play();
+    var sound = new Audio("./mp3/geluid.mp3");
+    sound.play();
+  }
 }
 
 // wordt uitgevoerd wanneer er op een mop in favorietenlijstje wordt geklikt.
