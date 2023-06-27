@@ -1,7 +1,8 @@
 var startButton = document.getElementById("start");
 var stopButton = document.getElementById("stop");
 var liList = document.querySelectorAll("li");
-var lightImage = document.getElementById("lights");
+var lightImage = document.querySelector("img:last-of-type");
+var favButton = document.querySelectorAll("button:first-of-type");
 
 var animationPaused = true;
 
@@ -30,7 +31,6 @@ stopButton.addEventListener("click", stopAnimation);
 
 // toevoegen aan favorieten
 // Bron: codepen animaties - oefening 3 shopping cart
-var favButton = document.querySelectorAll("button#favorieten");
 
 for (let i = 0; i < favButton.length; i++) {
   favButton[i].addEventListener("click", favorietMaken);
