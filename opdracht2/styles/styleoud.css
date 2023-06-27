@@ -1,0 +1,134 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+			 url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button:not(:disabled), summary {
+	cursor: pointer;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eeeeee;
+  --color-block:#fff;
+	--color-button: #6079f3;
+  --color-joke: #9ca9ea;
+}
+
+@media (prefers-color-scheme:dark) {
+	:root {
+	--color-text: #eee;
+	--color-background: #000;
+	--color-block: #5a5a5a;
+	--color-button: #45d19b;
+  --color-joke: #98dac1;
+	}
+}
+/****************/
+/* JOUW STYLING */
+/****************/
+body{
+  background-color: var(--color-background);
+}
+
+section{
+  width: clamp(23em, 40vw, 50em);
+  padding: .7em .7em;
+  border-radius: .8em;
+  background-color: var(--color-block);
+  margin: auto;
+  margin-top: 1em;
+}
+
+h1{
+  display: block;
+  text-align: center;
+  margin-top: 1em;
+  color: var(--color-text);
+  font-size: clamp(1.5em, 3vw, 2em);
+}
+
+button{
+  display: block;
+  align-items: center;
+  font-size: clamp(.9em, 2vw,1.2em);
+  color: var(--color-background);
+  background-color: var(--color-button);
+  border: none;
+  border-radius: .5em;
+  padding: .5em 1em;
+  margin: auto;
+}
+
+button:hover{
+  background-color: var(--color-joke);
+}
+
+button:active{
+  box-shadow: 0 0 0 4px var(--color-text);;
+}
+
+p{
+  font-size: clamp(1em, 2vw, 1.1em);
+  background-color: var(--color-joke);
+  color: var(--color-background);
+  word-wrap: break-word;
+  width: clamp(20em, 30vw, 47em);
+  border-radius: .8em;
+  margin: auto;
+  
+}
+
+.kleur{
+  margin-top: 1em;
+  padding: .8em 1em;
+}
+
+section:nth-of-type(2) {
+  margin-top: 5em;
+  min-height: 6em;
+  max-height: 20em;
+  overflow: auto; /* toont een scrollbalk als de lijst groter is */
+  
+}
+
+h2 {
+  text-align: center;
+  margin-top: 1em;
+  color: var(--color-text);
+  font-size: clamp(1.2em, 3vw, 1.7em);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 1s;
+}

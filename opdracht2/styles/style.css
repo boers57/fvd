@@ -28,109 +28,224 @@ button:not(:disabled), summary {
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eeeeee;
-  --color-block:#fff;
-	--color-button: #6079f3;
-  --color-joke: #9ca9ea;
+  --color-text: #fbfbfb;
+  --color-text-button: #fbfbfb;
+  --color-joke-text: #466ee5;
+  --color-button: #466ee5;
+  --color-background:#042486;
+  --color-circel: #fd2929;
+  --color-fav-button: #7e9bf3;
+  --color-grey: #efeeee;
+
+  
+	
 }
 
 @media (prefers-color-scheme:dark) {
 	:root {
-	--color-text: #eee;
-	--color-background: #000;
-	--color-block: #5a5a5a;
-	--color-button: #45d19b;
-  --color-joke: #98dac1;
+  --color-text: #fd2929;
+  --color-text-button: #fbfbfb;
+  --color-joke-text: #466ee5;
+  --color-button: #07216d;
+  --color-background:#000;
+  --color-circel: #fbfbfb;
+  --color-fav-button: #0f2b80; 
 	}
 }
 /****************/
 /* JOUW STYLING */
 /****************/
-body{
+body {
   background-color: var(--color-background);
 }
 
-section{
-  width: clamp(23em, 40vw, 50em);
-  padding: .7em .7em;
-  border-radius: .8em;
-  background-color: var(--color-block);
-  margin: auto;
-  margin-top: 1em;
-}
-
-h1{
-  display: block;
+h1 {
   text-align: center;
-  margin-top: 1em;
   color: var(--color-text);
-  font-size: clamp(1.5em, 3vw, 2em);
+  position: sticky;
 }
 
-button{
-  display: block;
+/***********/
+/* midden stuk */
+/**********/
+section {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  font-size: clamp(.9em, 2vw,1.2em);
-  color: var(--color-background);
-  background-color: var(--color-button);
-  border: none;
-  border-radius: .5em;
-  padding: .5em 1em;
-  margin: auto;
+  justify-content: center;
+  margin-top: 2em;
 }
 
-button:hover{
-  background-color: var(--color-joke);
+img {
+  display: block;
+  margin: 0 auto;
+  width: 22em;
 }
 
-button:active{
-  box-shadow: 0 0 0 4px var(--color-text);;
-}
-
-p{
-  font-size: clamp(1em, 2vw, 1.1em);
-  background-color: var(--color-joke);
-  color: var(--color-background);
-  word-wrap: break-word;
-  width: clamp(20em, 30vw, 47em);
-  border-radius: .8em;
-  margin: auto;
-  
-}
-
-.kleur{
-  margin-top: 1em;
-  padding: .8em 1em;
-}
-
-section:nth-of-type(2) {
-  margin-top: 5em;
-  min-height: 6em;
-  max-height: 20em;
-  overflow: auto; /* toont een scrollbalk als de lijst groter is */
-  
+img:last-of-type {
+  position: absolute;
+  display: none;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h2 {
-  text-align: center;
-  margin-top: 1em;
-  color: var(--color-text);
-  font-size: clamp(1.2em, 3vw, 1.7em);
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: var(--color-joke-text);
 }
 
-@keyframes fadeOut {
+/***********/
+/* hartje */
+/**********/
+/* hartje favorieten */
+a {
+  position: absolute;
+
+  font-size: 2.5em;
+  text-decoration: none;
+  color: var(--color-text);
+
+  top: 2em;
+  right: 1em;
+}
+
+span {
+  position: absolute;
+  top: 1em;
+  left: 1.3em;
+
+  min-width: 1.25em;
+  padding: 0 .25em;
+ 
+  background-color: var(--color-circel);
+  border-radius:10em;
+  
+  font-size:.4em;
+  text-align:center;
+  line-height:1.25em;
+  color: var(--color-text);
+}
+
+/* animatie */
+a span.updated{
+  animation-name: updated;
+  animation-duration:.2s;
+  animation-iteration-count:2;
+}
+
+@keyframes updated {
   0% {
-    opacity: 1;
+    transform:scale(1);
+  }
+  50% {
+    transform:scale(1.5);
   }
   100% {
-    opacity: 0;
-    display: none;
+    transform:scale(1);
   }
 }
 
-.fadeOut {
-  animation: fadeOut 1s;
+
+
+/**************************/
+/* Joke tekst en animatie */
+/* Code opzet van Eva gekregen */
+/**************************/
+ul {
+  list-style: none;
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
+  width: 13em;
+  padding: 0;
+  height: 8em;
+
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+@keyframes rrh {
+  0%{transform: translatey(0);}
+  100%{transform: translatey(-70em);}
+}
+
+li {
+  background-color: var(--color-grey);
+  
+  width: fit-content;
+  animation: rrh 5s infinite linear;
+  animation-play-state: paused;
+
+  padding: 1em;
+  margin: 1em 0;
+}
+
+p{
+  font-size: .8em;
+  color: var(--color-joke-text);
+}
+
+
+/**************************/
+/* buttons */
+/**************************/
+button:first-of-type {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--color-fav-button);
+  color: var(--color-text-button);
+  border: none;
+  border-radius: .3em;
+  padding: .4em;
+  margin-top: .4em;
+}
+
+button:nth-of-type(2) {
+  position: absolute;
+  top: 63.3%;
+  left: calc(50% - 4em);
+  transform: translate(-50%, -40%);
+
+  background-color: var(--color-button);
+  color: var(--color-text-button);
+  border: none;
+  border-radius: .3em;
+  padding: .6em 2em;
+  font-size: 1em;
+}
+
+button:nth-of-type(2):hover {
+  background-color: var(--color-background);
+}
+
+
+button:last-of-type {
+  position: absolute;
+  top: 64%;
+  left: calc(50% + 4em);
+  transform: translate(-50%, -50%);
+
+  background-color: var(--color-button);
+  color: var(--color-text-button);
+  border: none;
+  border-radius: .3em;
+  padding: .6em 2em;
+  font-size: 1em;
+}
+
+button:last-of-type:hover {
+  background-color: var(--color-background);
 }
 
 
